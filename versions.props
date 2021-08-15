@@ -1,15 +1,7 @@
 <Project>
   <PropertyGroup>
-    <PivotalServicesBootstrapVersion>1.1.1</PivotalServicesBootstrapVersion>
-    <PivotalServicesBootstrapVersionSuffix></PivotalServicesBootstrapVersionSuffix>
-    <PivotalServicesBootstrapVersionRevision>0</PivotalServicesBootstrapVersionRevision>
-    <PivotalServicesBootstrapBuildNumber>$([System.DateTime]::Now.ToString(yyyyMMddHHmmss))</PivotalServicesBootstrapBuildNumber>
+    <PivotalServicesBootstrapName>PivotalServices.AspNet.Bootstrap.Extensions</PivotalServicesBootstrapName>
     <PivotalServicesBootstrapCopyright>All rights reserved.</PivotalServicesBootstrapCopyright>
-    <PivotalServicesBootstrapPackageVersion>$(PivotalServicesBootstrapVersion)$(PivotalServicesBootstrapVersionSuffix)</PivotalServicesBootstrapPackageVersion>
-    <PivotalServicesBootstrapAssemblyVersion>$(PivotalServicesBootstrapVersion).$(PivotalServicesBootstrapVersionRevision)</PivotalServicesBootstrapAssemblyVersion>
-    <PivotalServicesBootstrapFileVersion>$(PivotalServicesBootstrapVersion).$(PivotalServicesBootstrapVersionRevision)</PivotalServicesBootstrapFileVersion>
-    <PivotalServicesBootstrapInformationalVersion>$(PivotalServicesBootstrapPackageVersion)-$(PivotalServicesBootstrapVersionRevision)-$(PivotalServicesBootstrapBuildNumber)</PivotalServicesBootstrapInformationalVersion>
-    <PivotalServicesBootstrapPackageVersion>$(PivotalServicesBootstrapPackageVersion)</PivotalServicesBootstrapPackageVersion>
   </PropertyGroup>
   <PropertyGroup>
     <MicrosoftAspNetVersion>5.2.7</MicrosoftAspNetVersion>

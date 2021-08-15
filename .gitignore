@@ -37,3 +37,6 @@ msbuild.wrn
 #Nuget Publish
 _publish
 publish-artifacts
+
+#gitversion
+gitversion.json
