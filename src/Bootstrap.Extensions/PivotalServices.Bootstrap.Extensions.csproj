@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="Current">
   <Import Project="..\..\versions.props" />
   
   <PropertyGroup>
@@ -20,11 +20,10 @@
     <Authors>ajaganathan</Authors>
     <Company>Pivotal</Company>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageLicenseExpression>true</PackageLicenseExpression>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Copyright>$(PivotalServicesBootstrapCopyright)</Copyright>
     <RepositoryUrl>https://github.com/alfusinigoj/pivotal_aspnet_bootstrap_extensions.git</RepositoryUrl>
-    <RepositoryType>git"</RepositoryType>
+    <RepositoryType>git</RepositoryType>
     <PackageTags>ASP.NET;Handlers;IoC;Autofac;Unity</PackageTags>
     <Description>ASP.NET framework bootstrap extensions package which helps in managing IoC using DI containers (Autofac, Unity and ServiceCollection) and creating dynamic http handlers on a fly</Description>
     <PackageProjectUrl>https://www.alfusjaganathan.com/projects/</PackageProjectUrl>

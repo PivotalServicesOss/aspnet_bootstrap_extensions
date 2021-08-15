@@ -6,9 +6,9 @@ properties {
   $solution_file = "$base_dir\$solution_name.sln"
   $test_dir = "$base_dir\test"
   $nuget = "nuget.exe"
-  $msbuild = "msbuild.exe"
+  $msbuild = Get-LatestMsbuildLocation
   $vstest = get_vstest_executable
-  $local_nuget_repo = "c:\nuget_packages"
+  $local_nuget_repo = "c:\MyLocalNugetRepo"
   $remote_nuget_repo = "https://api.nuget.org/v3/index.json"
   $remote_myget_repo = "https://www.myget.org/F/ajaganathan/api/v3/index.json"
   $repo_api_key = $api_key
