@@ -1,3 +1,6 @@
+#### 1.1.2
+- Updated package dependencies to latest compatible as of 8/14/2021
+
 #### 1.1.1
 - Handler error gracefully when accessing DependencyContainer without building AppBuilder
 

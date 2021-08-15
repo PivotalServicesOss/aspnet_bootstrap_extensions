@@ -13,7 +13,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <MicrosoftAspNetVersion>5.2.7</MicrosoftAspNetVersion>
-    <MicrosoftExtensionsVersion>3.1.7</MicrosoftExtensionsVersion>
+    <MicrosoftExtensionsVersion>3.1.18</MicrosoftExtensionsVersion>
     <TargetFrameworkGeneral>net461</TargetFrameworkGeneral>
   </PropertyGroup>
 </Project>
