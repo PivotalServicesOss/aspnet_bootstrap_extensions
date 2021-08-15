@@ -22,5 +22,5 @@ jobs:
       #    ACTIONS_ALLOW_UNSECURE_COMMANDS: true
       # Execute psake build with argument ()
       #- run: msys2do build.cmd cipk
-      - run: build.ps1 cipk
+      - run: build cipk
         
