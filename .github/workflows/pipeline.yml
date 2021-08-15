@@ -9,10 +9,18 @@ on:
 jobs:
 
   build:
-    runs-on: windows-latest  # For a list of available runner types, refer to
-                             # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
+    runs-on: windows-latest  
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
+      # Checks-out repository
+      - uses: actions/checkout@v1
+        with:
+          ref: refs/heads/master
+          fetch-depth: 1
+      # Execute psake build with argument ()
+      - name: Execute psake build
+#        env: 
+#          NUGET_APIKEY: ${{ secrets.AZ_VAULT_ACCESS_CLIENT_ID }}
+#          MYGET_APIKEY: ${{ secrets.AZ_VAULT_ACCESS_CLIENT_SECRET }}
+        shell: cmd
+        run: |
+          build.cmd cipk
