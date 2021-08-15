@@ -19,3 +19,5 @@ jobs:
       # Execute psake build with argument ()
       - uses: numworks/setup-msys2@v1
       - run: msys2do build.cmd cipk
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
