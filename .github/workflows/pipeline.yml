@@ -17,10 +17,5 @@ jobs:
           ref: refs/heads/master
           fetch-depth: 1
       # Execute psake build with argument ()
-      - name: Execute psake build
-#        env: 
-#          NUGET_APIKEY: ${{ secrets.AZ_VAULT_ACCESS_CLIENT_ID }}
-#          MYGET_APIKEY: ${{ secrets.AZ_VAULT_ACCESS_CLIENT_SECRET }}
-        shell: cmd
-        run: |
-          call build.cmd cipk
+      - uses: numworks/setup-msys2@v1
+      - run: msys2do build.cmd cipk
