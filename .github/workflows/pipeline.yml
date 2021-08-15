@@ -16,8 +16,10 @@ jobs:
         with:
           ref: refs/heads/master
           fetch-depth: 1
-      # Execute psake build with argument ()
+      # Setup cmd
       - uses: numworks/setup-msys2@v1
-      - run: msys2do build.cmd cipk
         env:
           ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+      # Execute psake build with argument ()
+      - run: msys2do build.cmd cipk
+        
