@@ -1,5 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <Import Project="..\..\versions.props" />
+  
   <PropertyGroup>
     <TargetFramework>$(TargetFrameworkGeneral)</TargetFramework>
     <RootNamespace>$(PivotalServicesBootstrapName)</RootNamespace>
