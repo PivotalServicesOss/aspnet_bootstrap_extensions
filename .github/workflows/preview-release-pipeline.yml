@@ -1,0 +1,23 @@
+name: .NET Full Framework - Nuget Package
+
+on:
+  push:
+    branches:   
+      - feature/**
+    
+jobs:
+
+  build:
+    runs-on: windows-latest  
+    steps:
+      # Checks-out repository
+      - uses: actions/checkout@v1
+      # Execute psake build script
+      - name: Execute psake build with argument (CiPublish2Myget)
+        shell: cmd
+        env: 
+          API_KEY: ${{ secrets.MYGET_API_KEY }}
+        run: |
+          build.cmd CiPublish2Myget $API_KEY
+        
+        

@@ -3,7 +3,6 @@ name: .NET Full Framework - Nuget Package
 on:
   push:
     branches:    
-      - master
       - feature/**
     
 jobs:
