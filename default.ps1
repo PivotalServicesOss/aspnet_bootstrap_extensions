@@ -154,7 +154,7 @@ task Push2Myget {
 	if($LASTEXITCODE -ne 0) {exit $LASTEXITCODE}
 
 	foreach ($package in $packages) {
-		Write-Host "Executing nuget push for the package: $package"
+		Write-Host "Executing nuget push for the package: $package, apikey: $api_key"
 		exec { & $nuget push $package -Source $remote_myget_repo -ApiKey $api_key}
         if($LASTEXITCODE -ne 0) {exit $LASTEXITCODE}
 	}
