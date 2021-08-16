@@ -13,9 +13,7 @@ jobs:
       # Execute psake build script
       - name: Execute psake build with argument (CiPublish2Myget)
         shell: cmd
-        env: 
-          API_KEY: 123456
         run: |
-          build.cmd CiPublish2Myget $API_KEY
+          build.cmd CiPublish2Myget ${{ secrets.MYGET_API_KEY }}
         
         
