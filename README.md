@@ -2,7 +2,7 @@
 
 Build | PivotalServices.AspNet.Bootstrap.Extensions |
 --- | --- |
-[![Build Status](https://github.com/alfusinigoj/pivotal_aspnet_bootstrap_extensions/actions/workflows/pipeline.yml/badge.svg?branch=master)](https://github.com/alfusinigoj/pivotal_aspnet_bootstrap_extensions/actions/workflows/pipeline.yml) | [![NuGet](https://img.shields.io/nuget/v/PivotalServices.AspNet.Bootstrap.Extensions.svg?style=flat-square)](http://www.nuget.org/packages/PivotalServices.AspNet.Bootstrap.Extensions)
+[![Nuget (Prod Release)](https://github.com/alfusinigoj/pivotal_aspnet_bootstrap_extensions/actions/workflows/prod-release-pipeline.yml/badge.svg)](https://github.com/alfusinigoj/pivotal_aspnet_bootstrap_extensions/actions/workflows/prod-release-pipeline.yml) | [![NuGet](https://img.shields.io/nuget/v/PivotalServices.AspNet.Bootstrap.Extensions.svg?style=flat-square)](http://www.nuget.org/packages/PivotalServices.AspNet.Bootstrap.Extensions)
 
 ### Quick Links
 - [Supported ASP.NET apps](https://github.com/alfusinigoj/pivotal_aspnet_bootstrap_extensions#supported-aspnet-apps)
