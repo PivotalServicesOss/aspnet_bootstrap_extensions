@@ -2,9 +2,9 @@ name: .NET Full Framework - Nuget Package
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches:    
+      - master
+      - feature/**
     
 jobs:
 
@@ -13,17 +13,10 @@ jobs:
     steps:
       # Checks-out repository
       - uses: actions/checkout@v1
-      # Setup cmd
-      #- uses: numworks/setup-msys2@v1
-      #  env:
-      #    ACTIONS_ALLOW_UNSECURE_COMMANDS: true
-      # Execute psake build with argument ()
-      #- run: msys2do build.cmd cipk
-      #- run: build.cmd cipk
-      - name: Run a one-line script
+      # Execute psake build script
+      - name: Execute psake build with argument (cipk)
         shell: cmd
         run: |
-          dir
           build.cmd cipk
         
         
