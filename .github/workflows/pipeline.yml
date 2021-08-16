@@ -13,9 +13,6 @@ jobs:
     steps:
       # Checks-out repository
       - uses: actions/checkout@v1
-        with:
-          ref: refs/heads/master
-          fetch-depth: 1
       # Setup cmd
       #- uses: numworks/setup-msys2@v1
       #  env:
@@ -24,9 +21,9 @@ jobs:
       #- run: msys2do build.cmd cipk
       #- run: build.cmd cipk
       - name: Run a one-line script
-        shell: powershell
+        shell: cmd
         run: |
           dir
-          build.ps1 cipk
+          build.cmd cipk
         
         
