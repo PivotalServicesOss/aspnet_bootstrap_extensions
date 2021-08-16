@@ -13,7 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution_items", "solution_
 		configure-build.ps1 = configure-build.ps1
 		default.ps1 = default.ps1
 		nuget.config = nuget.config
-		.github\workflows\pipeline.yml = .github\workflows\pipeline.yml
+		.github\workflows\pre-release-pipeline.yml = .github\workflows\pre-release-pipeline.yml
+		.github\workflows\prod-release-pipeline.yml = .github\workflows\prod-release-pipeline.yml
 		README.md = README.md
 		versions.props = versions.props
 	EndProjectSection
