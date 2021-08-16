@@ -24,6 +24,8 @@ jobs:
       #- run: msys2do build.cmd cipk
       #- run: build.cmd cipk
       - name: Run a one-line script
-        run: build.cmd cipk
-        shell: cmd
+        run: |
+        dir
+        build.cmd cipk
+        shell: powershell
         
