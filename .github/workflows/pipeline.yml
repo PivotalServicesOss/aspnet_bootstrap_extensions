@@ -23,4 +23,4 @@ jobs:
 #          MYGET_APIKEY: ${{ secrets.AZ_VAULT_ACCESS_CLIENT_SECRET }}
         shell: cmd
         run: |
-          build.cmd cipk
+          call build.cmd cipk
