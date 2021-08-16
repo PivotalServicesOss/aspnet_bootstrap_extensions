@@ -11,7 +11,6 @@ properties {
   $local_nuget_repo = "c:\MyLocalNugetRepo"
   $remote_nuget_repo = "https://api.nuget.org/v3/index.json"
   $remote_myget_repo = "https://www.myget.org/F/ajaganathan/api/v3/index.json"
-  $repo_api_key = $api_key
   $date = Get-Date 
 }
 
@@ -64,7 +63,7 @@ task SetReleaseBuild {
 task Restore {
     Write-Host "******************* Now restoring the solution dependencies *********************"
     exec { 
-        & $msbuild /t:restore $solution_file /v:n /p:NuGetInteractive="true"
+        & $msbuild /t:restore $solution_file /v:m /p:NuGetInteractive="true"
         if($LASTEXITCODE -ne 0) {exit $LASTEXITCODE}
     }
 }
@@ -75,7 +74,7 @@ task Clean -depends Restore{
         delete_directory $publish_dir
     }
     exec { 
-        & $msbuild /t:clean /v:n /p:Configuration=$project_config $solution_file 
+        & $msbuild /t:clean /v:m /p:Configuration=$project_config $solution_file 
     }
     if($LASTEXITCODE -ne 0) {exit $LASTEXITCODE}
 }
@@ -83,7 +82,7 @@ task Clean -depends Restore{
 task Compile -depends Restore {
     Write-Host "******************* Now compiling the solution *********************"
     exec { 
-        & $msbuild /t:build /v:n /p:Configuration=$project_config /nologo /p:Platform="Any CPU" /nologo $solution_file 
+        & $msbuild /t:build /v:m /p:Configuration=$project_config /nologo /p:Platform="Any CPU" /nologo $solution_file 
     }
     if($LASTEXITCODE -ne 0) {exit $LASTEXITCODE}
 }
@@ -106,7 +105,7 @@ task UnitTest -depends Compile{
 	foreach ($project in $projects) {
 		Write-Host "Executing nuget pack on the project: $project"
 		exec { 
-            & $msbuild /t:pack /v:n $project /p:OutputPath=$publish_dir /p:Configuration=$project_config
+            & $msbuild /t:pack /v:m $project /p:OutputPath=$publish_dir /p:Configuration=$project_config
             if($LASTEXITCODE -ne 0) {exit $LASTEXITCODE}
         }
 	}
@@ -140,7 +139,7 @@ task Push2Nuget {
 
 	foreach ($package in $packages) {
 		Write-Host "Executing nuget push for the package: $package"
-		exec { & $nuget push $package -Source $remote_nuget_repo -ApiKey $repo_api_key}
+		exec { & $nuget push $package -Source $remote_nuget_repo -ApiKey $api_key}
         if($LASTEXITCODE -ne 0) {exit $LASTEXITCODE}
 	}
 
@@ -156,7 +155,7 @@ task Push2Myget {
 
 	foreach ($package in $packages) {
 		Write-Host "Executing nuget push for the package: $package"
-		exec { & $nuget push $package -Source $remote_myget_repo -ApiKey $repo_api_key}
+		exec { & $nuget push $package -Source $remote_myget_repo -ApiKey $api_key}
         if($LASTEXITCODE -ne 0) {exit $LASTEXITCODE}
 	}
 

@@ -1,9 +1,9 @@
-name: .NET Full Framework - Nuget Package
+name: Myget (Pre-Release)
 
 on:
   push:
     branches:    
-      - feature/**
+      - master
     
 jobs:
 
@@ -13,9 +13,11 @@ jobs:
       # Checks-out repository
       - uses: actions/checkout@v1
       # Execute psake build script
-      - name: Execute psake build with argument (cipk)
+      - name: Execute psake build with argument (CiPublish2Myget)
         shell: cmd
+        env: 
+          API_KEY: ${{ secrets.NUGET_API_KEY }}
         run: |
-          build.cmd cipk
+          build.cmd CiPublish2Nuget $API_KEY
         
         

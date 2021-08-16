@@ -1,12 +1,10 @@
-name: .NET Full Framework - Nuget Package
+name: Nuget (Prod Release)
 
 on:
   push:
     branches:   
       - feature/**
-    
 jobs:
-
   build:
     runs-on: windows-latest  
     steps:
